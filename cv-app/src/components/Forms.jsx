@@ -4,6 +4,12 @@ import General from "./Forms/General";
 
 export default function Forms(){
     return <form action="">
-        <General />
+       <fieldset>
+        <legend>Name and Contact Details</legend>
+         <General />
+       </fieldset>
+           
+        
+        
     </form>
 }

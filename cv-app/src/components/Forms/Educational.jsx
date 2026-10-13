@@ -15,5 +15,6 @@ export default function EducationalBackground(){
 
 <div><button>Add</button></div>
 
+
     </>
 }
