@@ -1,4 +1,4 @@
-import {createRoot} from "react/client";
+import {createRoot} from "react-dom/client";
 
 import App from "./App";
 
