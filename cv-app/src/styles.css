@@ -54,3 +54,7 @@ form{
 
 }
 
+.education{
+    display: flex;
+    flex-direction: row;
+}
