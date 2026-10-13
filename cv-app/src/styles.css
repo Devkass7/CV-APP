@@ -2,6 +2,7 @@
 body{
    margin: 0;
    box-sizing: border-box;
+   background-color: #9c9c9c44;
 }
 
 header{
@@ -23,7 +24,7 @@ header{
 
 
 form{
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -37,11 +38,12 @@ form{
         padding: 5px;
         border-radius: 5px;
         width: fit-content;
-     
-       
+        margin-left: 0.5em;   
         
-       
-     
+        &:focus{
+            border: 3px solid lime;
+            outline: none;
+        }
         
     }
 }
@@ -64,6 +66,15 @@ form{
     justify-content: center;
     align-items: center;
    
+}
+
+textarea{
+border-radius: 5px;
+
+    &:focus{
+        border: 3px solid limegreen;
+        outline: none;
+    }
 }
 
 .work{

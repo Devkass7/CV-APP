@@ -9,9 +9,7 @@ export default function Forms(){
          <General />
          <EducationalBackground />
          <WorkExperience />
-       
-           
-        
-        
+
+       <button>GENERATE CV</button>           
     </form>
 }
