@@ -1,5 +1,7 @@
 export default function EducationalBackground(){
     return <>
+    
+    <h2>Educational Background</h2>
     <div>
     <label htmlFor="school">NAME OF UNIVERSITY</label>
     <input type="text" id="school" placeholder="Accra Technical University" /></div>

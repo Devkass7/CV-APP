@@ -1,13 +1,15 @@
 import General from "./Forms/General";
+import WorkExperience from "./Forms/WorkExperience";
+import EducationalBackground from "./Forms/Educational";
 
 
 
 export default function Forms(){
     return <form action="">
-       <fieldset>
-        <legend>Name and Contact Details</legend>
          <General />
-       </fieldset>
+         <EducationalBackground />
+         <WorkExperience />
+       
            
         
         
