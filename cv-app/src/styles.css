@@ -10,6 +10,7 @@ header{
     align-items: center;
     background-color: #0000ff3b;
     border-bottom: 4px solid rgba(70, 150, 1, 0.575);
+   
     
 
     h1{
@@ -24,6 +25,10 @@ header{
 form{
     margin-top: 4rem;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
    
 
     input{
@@ -40,5 +45,12 @@ form{
 .names, .contact{
     display: flex;
     gap:20px
+}
+
+.careerProfile{
+  display: flex;
+ align-items: center;
+ gap: 1em;
+
 }
 

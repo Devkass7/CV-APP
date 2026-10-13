@@ -1,6 +1,6 @@
 export default function General() {
   return (
-    <>
+    <div className="personal">
       <h2>Name and Contact Details</h2>
       <div className="names">
         <div>
@@ -24,12 +24,12 @@ export default function General() {
           <label htmlFor="email">EMAIL</label>
           <input type="email" id="email" placeholder="jimroy@example.com" />
         </div>
-
-        <div>
-          <label htmlFor="profile">Career Profile</label>
-          <textarea name="profile" id="profile"></textarea>
-        </div>
       </div>
-    </>
+
+      <div className="careerProfile">
+        <label htmlFor="profile">Career Profile</label>
+        <textarea name="profile" id="profile"></textarea>
+      </div>
+    </div>
   );
 }
