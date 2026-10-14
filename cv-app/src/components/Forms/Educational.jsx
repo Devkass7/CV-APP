@@ -1,9 +1,37 @@
+import { useState } from "react"
+
 export default function EducationalBackground() {
+
+  const [education, setEducation] = useState({
+    school:"",
+    programme:"",
+    year:""
+  })
+
+
+  function EducationalHandler(event){
+
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+
+    const school = formData.get("school")
+    const programme = formData.get("programme")
+    const dateCompleted = formData.get("date-completed")
+
+
+    setEducation(prev => {
+      return {...prev, }
+    })
+  }
+
+
 
 
   
   return (
     <> <h2>Educational Background</h2>
+    <form action={EducationalBackground}>
      <div className="education">
     
     <div>
@@ -28,7 +56,8 @@ export default function EducationalBackground() {
     <div>
       <button>Add</button>
     </div>
-  </div></>
+  </div></form>
+  </>
  
   )
  
