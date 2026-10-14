@@ -10,6 +10,7 @@ export default function WorkExperience() {
             type="text"
             id="facility"
             placeholder="Korlebu Teaching Hospital"
+            name="facility"
           />
         </div>
         <div>
@@ -18,13 +19,14 @@ export default function WorkExperience() {
             type="text"
             id="programme"
             placeholder="Medical Laboratory Scientist"
+            name="job-title"
           />
         </div>
         <div className="date">
-          <label for="start-date">Start Date:</label>
+          <label htmlFor="start-date">Start Date:</label>
           <input type="date" id="start-date" name="start-date"></input>
 
-          <label for="end-date">End Date:</label>
+          <label htmlFor="end-date">End Date:</label>
           <input type="date" id="end-date" name="end-date"></input>
         </div>
         <div>

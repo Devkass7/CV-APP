@@ -5,7 +5,16 @@ import EducationalBackground from "./Forms/Educational";
 
 
 export default function Forms(){
-    return <form action="">
+
+function HandleSubmit(event){
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget)
+
+    console.log(formData.get("phone"))
+}
+
+    return <form onSubmit={HandleSubmit}>
          <General />
          <EducationalBackground />
          <WorkExperience />
