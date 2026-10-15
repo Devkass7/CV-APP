@@ -17,7 +17,7 @@ export default function WorkExperience() {
           <label htmlFor="programme">JOB TITLE</label>
           <input
             type="text"
-            id="programme"
+            id="jobTitle"
             placeholder="Medical Laboratory Scientist"
             name="job-title"
           />
