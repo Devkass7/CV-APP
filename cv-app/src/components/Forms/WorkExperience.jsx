@@ -9,7 +9,7 @@ export default function WorkExperience() {
           <input
             type="text"
             id="facility"
-            placeholder="Korlebu Teaching Hospital"
+           value="Korlebu Teaching Hospital"
             name="facility"
           />
         </div>
@@ -18,7 +18,7 @@ export default function WorkExperience() {
           <input
             type="text"
             id="jobTitle"
-            placeholder="Medical Laboratory Scientist"
+           value="Medical Laboratory Scientist"
             name="job-title"
           />
         </div>

@@ -8,14 +8,16 @@ import EducationalBackground from "./Forms/Educational";
 
 export default function Forms(){
 
+  const [values, setValues] = useState({})
+
 function HandleSubmit(event){
    
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
-const values = Object.fromEntries(formData.entries())
+   const data = Object.fromEntries(formData.entries())
 
-
-
+setValues(data)
+console.log(values)
 
 }
 
@@ -27,9 +29,9 @@ const values = Object.fromEntries(formData.entries())
 
     return <form onSubmit={HandleSubmit}>
          <General />
-         <EducationalBackground   />
+         <EducationalBackground  school={values.school} programme = {values.programme} date = {values.dateCompleted} />
          <WorkExperience />
-
+       
        <button>GENERATE CV</button>           
     </form>
 }

@@ -7,7 +7,9 @@ function onChangeHandler(e){
 }
 
 
-
+function click(){
+  console.log(props.school)
+}
   
   return (
     <> <h2>Educational Background</h2>
@@ -15,7 +17,7 @@ function onChangeHandler(e){
     
     <div>
       <label htmlFor="school">NAME OF UNIVERSITY</label>
-      <input  type="text" id="school" name="school" placeholder="Accra Technical University" />
+      <input  type="text" id="school" name="school" value="Accra Technical University" />
     </div>
 
     <div>
@@ -23,17 +25,17 @@ function onChangeHandler(e){
       <input
         type="text"
         id="programme"
-        placeholder="Medical Laboratory Science"
+       value="Medical Laboratory Science"
         name="programme"
       />
     </div>
     <div>
       <label htmlFor="date">DATE COMPLETED</label>
-      <input type="date" id="date" name="dateCompleted" />
+      <input type="date" id="date" name="dateCompleted"/>
     </div>
 
     <div>
-      <button>Add</button>
+      <button onClick={click}>Add</button>
     </div>
   </div></>
  
