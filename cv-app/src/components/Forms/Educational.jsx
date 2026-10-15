@@ -29,7 +29,7 @@ export default function EducationalBackground(props) {
     </div>
 
     <div>
-      <button onClick={props.addClicked}>Add</button>
+      <button onClick={props.educationalEntry}>Add</button>
     </div>
   </div></>
  

@@ -14,38 +14,23 @@ function HandleSubmit(event){
     const formData = new FormData(event.currentTarget)
 
     console.log(formData.get("school"))
-
-
 }
 
-const [education , setEducation] = useState({school:"",
-    programme:"",
-    dateCompleted:""
-})
+/**
+ * ! Getting educational entries
+ */
+function educationalEntry(e){
+    e.preventDefault();
 
-function EducationalData(e){
-    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
 
-   let school = document.getElementById("school").value
-  let programme =  document.getElementById("programme").value
-  let dateCompleted =  document.getElementById("date").value
-
-    //console.log(school,dateCompleted,programme);
-    
-    setEducation(prev => {
-        return{
-            ...prev, school:school , programme:programme, dateCompleted:dateCompleted
-        }
-    })
-    education && console.log(education);
+    console.log(formData.get("school"))
 }
-
-
 
 
     return <form onSubmit={HandleSubmit}>
          <General />
-         <EducationalBackground  addClicked = {EducationalData}/>
+         <EducationalBackground  />
          <WorkExperience />
 
        <button>GENERATE CV</button>           
