@@ -17,12 +17,12 @@ export default function General() {
       <div className="contact">
         <div>
           <label htmlFor="phone">PHONE NUMBER</label>
-          <input type="tel" id="phone" name = "phone" placeholder="0244 xxx xxx" />
+          <input type="tel" id="phone" name = "phone" placeholder="0244 xxx xxx" autoComplete="tel"/>
         </div>
 
         <div>
           <label htmlFor="email">EMAIL</label>
-          <input type="email" id="email"name="email" placeholder="jimroy@example.com" />
+          <input type="email" id="email"name="email" placeholder="jimroy@example.com" autoComplete="email"/>
         </div>
       </div>
 
