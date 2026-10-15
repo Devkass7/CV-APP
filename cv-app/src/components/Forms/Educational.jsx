@@ -17,7 +17,7 @@ function click(){
     
     <div>
       <label htmlFor="school">NAME OF UNIVERSITY</label>
-      <input  type="text" id="school" name="school" value="Accra Technical University" />
+      <input  type="text" id="school" name="school" placeholder="Accra Technical University" />
     </div>
 
     <div>
@@ -25,7 +25,7 @@ function click(){
       <input
         type="text"
         id="programme"
-       value="Medical Laboratory Science"
+       placeholder="Medical Laboratory Science"
         name="programme"
       />
     </div>
@@ -35,7 +35,7 @@ function click(){
     </div>
 
     <div>
-      <button onClick={click}>Add</button>
+      <button onChange={props.HandleChange}>Add</button>
     </div>
   </div></>
  

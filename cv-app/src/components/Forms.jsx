@@ -21,6 +21,11 @@ console.log(values)
 
 }
 
+function HandleChange(e){
+    const [name, value] = e.currentTarget;
+    console.log(name, value)
+}
+
 /**
  * ! Getting educational entries
  */
@@ -29,7 +34,7 @@ console.log(values)
 
     return <form onSubmit={HandleSubmit}>
          <General />
-         <EducationalBackground  school={values.school} programme = {values.programme} date = {values.dateCompleted} />
+         <EducationalBackground  school={values.school} programme = {values.programme} date = {values.dateCompleted}  change ={HandleChange}/>
          <WorkExperience />
        
        <button>GENERATE CV</button>           
