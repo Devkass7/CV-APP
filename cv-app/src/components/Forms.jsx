@@ -14,6 +14,8 @@ function HandleSubmit(event){
     const formData = new FormData(event.currentTarget)
 
     console.log(formData.get("school"))
+
+
 }
 
 /**
@@ -24,13 +26,12 @@ function educationalEntry(e){
 
     const formData = new FormData(e.currentTarget)
 
-    console.log(formData.get("school"))
 }
 
 
     return <form onSubmit={HandleSubmit}>
          <General />
-         <EducationalBackground  />
+         <EducationalBackground   />
          <WorkExperience />
 
        <button>GENERATE CV</button>           

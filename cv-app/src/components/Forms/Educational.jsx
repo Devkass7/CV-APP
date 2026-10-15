@@ -1,6 +1,10 @@
 export default function EducationalBackground(props) {
 
   
+function onChangeHandler(e){
+ e.preventDefault()
+
+}
 
 
 
@@ -11,7 +15,7 @@ export default function EducationalBackground(props) {
     
     <div>
       <label htmlFor="school">NAME OF UNIVERSITY</label>
-      <input type="text" id="school" name="school" placeholder="Accra Technical University" />
+      <input  type="text" id="school" name="school" placeholder="Accra Technical University" />
     </div>
 
     <div>
@@ -29,7 +33,7 @@ export default function EducationalBackground(props) {
     </div>
 
     <div>
-      <button onClick={props.educationalEntry}>Add</button>
+      <button onClick={props.click}>Add</button>
     </div>
   </div></>
  
