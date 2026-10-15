@@ -3,6 +3,7 @@ import { useState } from "react";
 import General from "./Forms/General";
 import WorkExperience from "./Forms/WorkExperience";
 import EducationalBackground from "./Forms/Educational";
+import Cv from "./Cv";
 
 
 
@@ -16,15 +17,15 @@ function HandleSubmit(event){
     const formData = new FormData(event.currentTarget)
    const data = Object.fromEntries(formData.entries())
 
-setValues(data)
-console.log(values)
+ setValues(prev => ({...prev, ...data}))
+
 
 }
 
-function HandleChange(e){
-    const [name, value] = e.currentTarget;
-    console.log(name, value)
-}
+// function HandleChange(e){
+//     const {name, value} = e.target;
+//     console.log(name, value)
+// }
 
 /**
  * ! Getting educational entries
@@ -33,10 +34,12 @@ function HandleChange(e){
 
 
     return <form onSubmit={HandleSubmit}>
-         <General />
-         <EducationalBackground  school={values.school} programme = {values.programme} date = {values.dateCompleted}  change ={HandleChange}/>
-         <WorkExperience />
+       <General />
+       <EducationalBackground   />
+        <WorkExperience />
        
-       <button>GENERATE CV</button>           
-    </form>
+        <button>GENERATE CV</button>           
+     </form>
+  
 }
+

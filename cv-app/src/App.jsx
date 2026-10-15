@@ -1,10 +1,12 @@
 import Forms from "./components/Forms"
 import "./styles.css"
-import Hearder from "./components/Header"
+import Header from "./components/Header"
+import Cv from "./components/Cv"
 
 export default function App(){
     return <>
-        <Hearder />
-        <Forms />
+      <Header />
+        {/* <Forms /> */}
+        <Cv />
     </>
 }
