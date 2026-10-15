@@ -10,10 +10,11 @@ export default function Forms(){
 
 function HandleSubmit(event){
    
-
+    event.preventDefault()
     const formData = new FormData(event.currentTarget)
+const values = Object.fromEntries(formData.entries())
 
-    console.log(formData.get("school"))
+
 
 
 }
@@ -21,12 +22,7 @@ function HandleSubmit(event){
 /**
  * ! Getting educational entries
  */
-function educationalEntry(e){
-    e.preventDefault();
 
-    const formData = new FormData(e.currentTarget)
-
-}
 
 
     return <form onSubmit={HandleSubmit}>

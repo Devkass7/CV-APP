@@ -29,11 +29,11 @@ function onChangeHandler(e){
     </div>
     <div>
       <label htmlFor="date">DATE COMPLETED</label>
-      <input type="date" id="date" name="date-completed" />
+      <input type="date" id="date" name="dateCompleted" />
     </div>
 
     <div>
-      <button onClick={props.click}>Add</button>
+      <button>Add</button>
     </div>
   </div></>
  
