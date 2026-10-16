@@ -19,6 +19,8 @@ function HandleSubmit(event){
     const formData = new FormData(event.currentTarget)
    const data = Object.fromEntries(formData.entries())
 
+   console.log(data);
+   
  setValues(prev => ({...prev, ...data}))
 
  setCv(prev => !prev)
@@ -36,7 +38,7 @@ function HandleSubmit(event){
 
 
 
-    return cv ? <Cv data= {data}/>:  <form onSubmit={HandleSubmit}>
+    return cv ? <Cv />:  <form onSubmit={HandleSubmit}>
        <General />
        <EducationalBackground   />
         <WorkExperience />

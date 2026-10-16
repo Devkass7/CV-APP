@@ -13,7 +13,7 @@ export default function Cv(props){
         {/* <Header /> */}
 
         <section>
-            <p>Phone Number:</p>
+            <p>Phone Number: {props.phone}</p>
             <p>Email: </p>
 
 
