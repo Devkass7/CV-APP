@@ -9,6 +9,8 @@ import Cv from "./Cv";
 
 export default function Forms(){
 
+    const[cv, setCv] = useState(false)
+
   const [values, setValues] = useState({})
 
 function HandleSubmit(event){
@@ -19,6 +21,7 @@ function HandleSubmit(event){
 
  setValues(prev => ({...prev, ...data}))
 
+ setCv = (prev => !prev)
 
 }
 
@@ -33,13 +36,13 @@ function HandleSubmit(event){
 
 
 
-    return <form onSubmit={HandleSubmit}>
+    return cv ? <Cv />:  <form onSubmit={HandleSubmit}>
        <General />
        <EducationalBackground   />
         <WorkExperience />
        
         <button>GENERATE CV</button>           
-     </form>
+     </form> 
   
 }
 

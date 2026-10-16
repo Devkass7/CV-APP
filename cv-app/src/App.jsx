@@ -6,7 +6,7 @@ import Cv from "./components/Cv"
 export default function App(){
     return <>
       <Header />
-        {/* <Forms /> */}
-        <Cv />
+        <Forms />
+       
     </>
 }
