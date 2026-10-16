@@ -38,7 +38,7 @@ function HandleSubmit(event){
 
 
 
-    return cv ? <Cv />:  <form onSubmit={HandleSubmit}>
+    return cv ? <Cv data = {values}/>:  <form onSubmit={HandleSubmit}>
        <General />
        <EducationalBackground   />
         <WorkExperience />
