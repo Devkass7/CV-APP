@@ -6,49 +6,52 @@ import EducationalBackground from "./Forms/Educational";
 import Cv from "./Cv";
 import Header from "./Header";
 
+export default function Forms() {
+  const [cv, setCv] = useState(false);
 
+  const [values, setValues] = useState({});
 
-export default function Forms(){
+  function HandleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
 
-    const[cv, setCv] = useState(false)
+    console.log(data);
 
-  const [values, setValues] = useState({})
+    setValues((prev) => ({ ...prev, ...data }));
 
-function HandleSubmit(event){
+    setCv((prev) => !prev);
+  }
+
+  // function HandleChange(e){
+  //     const {name, value} = e.target;
+  //     console.log(name, value)
+  // }
+
+  /**
+   * ! Getting educational entries
+   */
+
+  function Showforms(){
+    return(
+      <>
+      <Header />
+        <form onSubmit={HandleSubmit}>
+          <General />
+          <EducationalBackground />
+          <WorkExperience />
+
+          <button>GENERATE CV</button>
+        </form>
+      </>)}
+  }
+
+  return 
+    
+      
+      cv ? (
+        <Cv data={values} />
+      ) : Showforms
    
-    event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-   const data = Object.fromEntries(formData.entries())
-
-   console.log(data);
-   
- setValues(prev => ({...prev, ...data}))
-
- setCv(prev => !prev)
-
+ 
 }
-
-// function HandleChange(e){
-//     const {name, value} = e.target;
-//     console.log(name, value)
-// }
-
-/**
- * ! Getting educational entries
- */
-
-
-
-    return <>
-    <Header />
-  { cv ?  <Cv data = {values}/>:  <form onSubmit={HandleSubmit}>
-       <General />
-       <EducationalBackground   />
-        <WorkExperience />
-       
-        <button>GENERATE CV</button>           
-     </form> }
-     </>
-  
-}
-

@@ -19,7 +19,7 @@ export default function Cv(props) {
       </section>
 
       <section>
-        {" "}
+       
         <h2>Educational Background</h2>
         <table>
           <thead>
