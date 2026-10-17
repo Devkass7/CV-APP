@@ -22,7 +22,7 @@ export default function General() {
 
         <div>
           <label htmlFor="email">EMAIL</label>
-          <input type="email" id="email"name="email" defaultValue="jimroy@example.com" autoComplete="email"/>
+          <input type="email" id="email" name="email" defaultValue="jimroy@example.com" autoComplete="email"/>
         </div>
       </div>
 

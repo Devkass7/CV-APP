@@ -14,7 +14,7 @@ export default function Cv(props){
 
         <section>
             <p>Phone Number: {props.data.phone}</p>
-            <p>Email: </p>
+            <p>Email: {props.data.email}</p>
 
 
         </section>
@@ -66,8 +66,8 @@ export default function Cv(props){
                     <tr>
                         <td >{props.data.facility}</td>
                         <td>{props.data.jobTitle}</td>
-                        <td>{props.data.start-date}</td>
-                        <td>{props.data.end-date}</td>
+                        <td>{props.data.startDate}</td>
+                        <td>{props.data.endDate}</td>
                     </tr>
                 </tbody>
             </table>
