@@ -4,6 +4,7 @@ import General from "./Forms/General";
 import WorkExperience from "./Forms/WorkExperience";
 import EducationalBackground from "./Forms/Educational";
 import Cv from "./Cv";
+import Header from "./Header";
 
 
 
@@ -38,13 +39,16 @@ function HandleSubmit(event){
 
 
 
-    return cv ? <Cv data = {values}/>:  <form onSubmit={HandleSubmit}>
+    return <>
+    <Header />
+  { cv ?  <Cv data = {values}/>:  <form onSubmit={HandleSubmit}>
        <General />
        <EducationalBackground   />
         <WorkExperience />
        
         <button>GENERATE CV</button>           
-     </form> 
+     </form> }
+     </>
   
 }
 
