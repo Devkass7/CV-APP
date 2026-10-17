@@ -19,7 +19,7 @@ export default function Cv(props){
 
         </section>
 
-        <section>
+        <section className="careerprofile">
             <h2>Career Profile</h2>
             <p>{props.data.profile}</p>
         </section>

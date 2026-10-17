@@ -92,8 +92,17 @@ border-radius: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
 
+    h2{
+        text-align: center;
+    }
+
+    .careerprofile{
+        max-width: 60%;
+        text-align: justify;
+    }
 
     table {
   border-collapse: collapse;
@@ -101,6 +110,7 @@ border-radius: 5px;
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
+  width: rem;
 }
 
 caption {
