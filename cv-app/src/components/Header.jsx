@@ -1,8 +1,8 @@
 
-export default function Header(){
+export default function Header(props){
         return (
             <header>
-                <h1>Prince Dawuni's CV</h1>
+                {props.fname} ? <h1>{props.fname} {props.lname} CV</h1> :<h1>Welcome to the  CV Generator</h1>
             </header>
         )
 };

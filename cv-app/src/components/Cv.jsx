@@ -2,9 +2,11 @@ import Forms from "./Forms";
 import Header from "./Header";
 
 export default function Cv(props) {
-  return (
+  return (<>
+  <Header fname = {props.data.fname} lname= {props.data.lname}/>
+ 
     <div className="main">
-      {/* <Header /> */}
+      
 
       <section>
         <p>Phone Number: {props.data.phone}</p>
@@ -55,6 +57,6 @@ export default function Cv(props) {
           </tbody>
         </table>
       </section>
-    </div>
+    </div> </>
   );
 }
