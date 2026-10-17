@@ -24,12 +24,9 @@ export default function Cv(props){
             <p>{props.data.profile}</p>
         </section>
 
-        <section>
+        <section>  <h2>Educational Background</h2>
             <table>
-                <caption>
-                    <h2>Educational Background</h2>
-                </caption>
-
+            
                 <thead>
                     <tr>
                     <th>Institution</th>
@@ -49,10 +46,11 @@ export default function Cv(props){
 
 
         <section>
+            <h2>Work Experience</h2>
             <table>
-                <caption>
-                    <h2>Work Experience</h2>
-                </caption>
+               
+                    
+             
 
                 <thead>
                     <tr>
