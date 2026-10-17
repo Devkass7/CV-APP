@@ -24,10 +24,10 @@ export default function WorkExperience() {
         </div>
         <div className="date">
           <label htmlFor="start-date">Start Date:</label>
-          <input type="date" id="start-date" name="start-date"></input>
+          <input type="date" id="start-date" name="startDate"></input>
 
           <label htmlFor="end-date">End Date:</label>
-          <input type="date" id="end-date" name="end-date"></input>
+          <input type="date" id="end-date" name="endDate"></input>
         </div>
         <div>
           <button>Add</button>
