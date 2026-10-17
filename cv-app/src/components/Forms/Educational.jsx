@@ -17,7 +17,7 @@ function click(){
     
     <div>
       <label htmlFor="school">NAME OF UNIVERSITY</label>
-      <input  type="text" id="school" name="school" placeholder="Accra Technical University" />
+      <input  type="text" id="school" name="school" defaultValue="Accra Technical University" />
     </div>
 
     <div>
@@ -25,7 +25,7 @@ function click(){
       <input
         type="text"
         id="programme"
-       placeholder="Medical Laboratory Science"
+       defaultValue="Medical Laboratory Science"
         name="programme"
       />
     </div>

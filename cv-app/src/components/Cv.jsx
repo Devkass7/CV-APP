@@ -21,18 +21,56 @@ export default function Cv(props){
 
         <section>
             <h2>Career Profile</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                 Qui tenetur vitae, labore ab distinctio, deserunt iusto facilis animi sequi, 
-                 corrupti quod soluta nemo quis! Recusandae accusantium nam magni eligendi id.</p>
+            <p>{props.data.profile}</p>
         </section>
 
         <section>
-            <h2>Educational Background</h2>
+            <table>
+                <caption>
+                    <h2>Educational Background</h2>
+                </caption>
+
+                <thead>
+                    <tr>
+                    <th>Institution</th>
+                    <th>Programme Studied</th>
+                    <th>Year of Completion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{props.data.school}</th>
+                        <td>{props.data.programme}</td>
+                        <td>{props.data.dateCompleted}</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
 
         <section>
-            <h2>Work Experience</h2>
+            <table>
+                <caption>
+                    <h2>Work Experience</h2>
+                </caption>
+
+                <thead>
+                    <tr>
+                    <th>Organisation</th>
+                    <th>Job Title</th>
+                    <th>Date Started</th>
+                    <th>Date Ended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td >{props.data.facility}</td>
+                        <td>{props.data.jobTitle}</td>
+                        <td>{props.data.start-date}</td>
+                        <td>{props.data.end-date}</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         
