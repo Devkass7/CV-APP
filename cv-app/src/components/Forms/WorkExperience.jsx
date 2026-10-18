@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { formatDate } from "../../utils/formatDate";
+import { formatDate } from "./formatDate";
 
 const emptyDraft = { facility: "", jobTitle: "", startDate: "", endDate: "" };
 

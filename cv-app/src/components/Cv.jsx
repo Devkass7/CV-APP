@@ -1,5 +1,5 @@
 import Header from "./Header";
-import { formatDate } from "../utils/formatDate";
+import { formatDate } from "./Forms/formatDate";
 
 export default function Cv({ general, education, work, onEdit }) {
   return (
