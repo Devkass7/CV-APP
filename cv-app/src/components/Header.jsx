@@ -1,9 +1,9 @@
+export default function Header({ fname, lname }) {
+  const fullName = [fname, lname].filter(Boolean).join(" ");
 
-export default function Header(props){
-
-        return (
-            <header>
-               { props.fname ?<h1>{props.fname} {props.lname} CV</h1>:<h1>Welcome to the  CV Generator</h1>}
-            </header>
-        )
-};
+  return (
+    <header>
+      <h1>{fullName ? `${fullName}'s CV` : "Welcome to the CV Generator"}</h1>
+    </header>
+  );
+}
