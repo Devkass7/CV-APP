@@ -5,24 +5,24 @@ export default function General() {
       <div className="names">
         <div>
           <label htmlFor="fname">FIRST NAME</label>
-          <input type="text" id="fname" name="fname" defaultValue="John" />
+          <input type="text" id="fname" name="fname" defaultValue="John" required/>
         </div>
 
         <div>
           <label htmlFor="lname">LAST NAME</label>
-          <input type="text" id="lname" name="lname" defaultValue="Doe" />
+          <input type="text" id="lname" name="lname" defaultValue="Doe" required/>
         </div>
       </div>
 
       <div className="contact">
         <div>
           <label htmlFor="phone">PHONE NUMBER</label>
-          <input type="tel" id="phone" name = "phone" defaultValue="0244 xxx xxx" autoComplete="tel"/>
+          <input type="tel" id="phone" name = "phone" defaultValue="0244 xxx xxx" autoComplete="tel"  required/>
         </div>
 
         <div>
           <label htmlFor="email">EMAIL</label>
-          <input type="email" id="email" name="email" defaultValue="jimroy@example.com" autoComplete="email"/>
+          <input type="email" id="email" name="email" defaultValue="jimroy@example.com" autoComplete="email" required/>
         </div>
       </div>
 

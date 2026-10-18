@@ -35,7 +35,7 @@ function click(){
     </div>
 
     <div>
-      <button onChange={props.HandleChange}>Add</button>
+      {/* <button onChange={props.HandleChange}>Add</button> */}
     </div>
   </div></>
  
