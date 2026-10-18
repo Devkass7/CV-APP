@@ -3,7 +3,7 @@ import Header from "./Header";
 
 export default function Cv(props) {
   return (<>
-  <Header fname = {props.data.fname} lname= {props.data.lname}/>
+  <Header fname = {props.data.fname} lname= {props.data.lname + "'s"}/>
  
     <div className="main">
       
