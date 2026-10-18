@@ -11,23 +11,6 @@ export default function Forms() {
 
   const [values, setValues] = useState({});
 
-
-  // function Showforms(){
-  //   return
-  //     <>
-  //     <Header />
-  //       <form onSubmit={HandleSubmit}>
-  //         <General />
-  //         <EducationalBackground />
-  //         <WorkExperience />
-
-  //         <button>GENERATE CV</button>
-  //       </form>
-  //     </>}
-  // }
-
-
-
   function HandleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -49,16 +32,18 @@ export default function Forms() {
    * ! Getting educational entries
    */
 
-  return  cv ?<Cv data ={values} /> : <>
+  return cv ? (
+    <Cv data={values} />
+  ) : (
+    <>
       <Header />
-        <form onSubmit={HandleSubmit}>
-          <General />
-          <EducationalBackground />
-          <WorkExperience />
+      <form onSubmit={HandleSubmit}>
+        <General />
+        <EducationalBackground />
+        <WorkExperience />
 
-          <button>GENERATE CV</button>
-        </form>
-      </>
-   
-
+        <button>GENERATE CV</button>
+      </form>
+    </>
+  );
 }
