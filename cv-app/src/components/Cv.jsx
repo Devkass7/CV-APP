@@ -1,89 +1,82 @@
-import { useState } from "react";
 import Header from "./Header";
-import WorkExperience from "./Forms/WorkExperience";
-import EducationalBackground from "./Forms/Educational";
-import General from "./Forms/General";
+import { formatDate } from "../utils/formatDate";
 
-export default function Cv(props) {
+export default function Cv({ general, education, work, onEdit }) {
+  return (
+    <>
+      <Header fname={general.fname} lname={general.lname} />
 
-  const [general, setGeneral ] = useState(false)
-  const [education, setEducation ] = useState(false)
-  const [work, setWork ] = useState(false)
-
-function changeGeneral() {
-  setGeneral(prev => !prev)
-}
-
-function changeEducation() {
-  setEducation(prev => !prev)
-}
-
-function changeWork() {
-  setWork(prev => !prev)
-}
-
-
-
-  return (<>
-  <Header fname = {props.data.fname} lname= {props.data.lname + "'s"}/>
- 
-    <div className="main">
-      
-
-      <section>
-        <p>Phone Number: {props.data.phone}</p>
-        <p>Email: {props.data.email}</p>
-      </section>
-
-      <section className="careerprofile">
-        <h2>Career Profile</h2>
-        <p>{props.data.profile}</p>
-      </section>
-
-     { education ? (<EducationalBackground /> ):(<section>
-       <div className="educatinol">
-        <h2>Educational Background</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Institution</th>
-              <th>Programme Studied</th>
-              <th>Year of Completion</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">{props.data.school}</th>
-              <td>{props.data.programme}</td>
-              <td>{props.data.dateCompleted}</td>
-            </tr>
-          </tbody> 
-        </table><button onClick={changeEducation}></button>
-        </div>)
-
-        <div className="workExperience">
-        <h2>Work Experience</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Organisation</th>
-              <th>Job Title</th>
-              <th>Date Started</th>
-              <th>Date Ended</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{props.data.facility}</td>
-              <td>{props.data.jobTitle}</td>
-              <td>{props.data.startDate}</td>
-              <td>{props.data.endDate}</td>
-            </tr>
-          </tbody>
-        </table><button></button>
+      <div className="main">
+        <div className="actions">
+          <button type="button" onClick={onEdit}>Edit</button>
         </div>
-      </section>
-     )}
-    </div> </>
+
+        {(general.phone || general.email) && (
+          <section>
+            {general.phone && <p>Phone Number: {general.phone}</p>}
+            {general.email && <p>Email: {general.email}</p>}
+          </section>
+        )}
+
+        {general.profile && (
+          <section className="careerprofile">
+            <h2>Career Profile</h2>
+            <p>{general.profile}</p>
+          </section>
+        )}
+
+        <section>
+          <h2>Educational Background</h2>
+          {education.length === 0 ? (
+            <p>No education added.</p>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Institution</th>
+                  <th>Programme Studied</th>
+                  <th>Date Completed</th>
+                </tr>
+              </thead>
+              <tbody>
+                {education.map((e) => (
+                  <tr key={e.id}>
+                    <th scope="row">{e.school}</th>
+                    <td>{e.programme}</td>
+                    <td>{formatDate(e.dateCompleted)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          <h2>Work Experience</h2>
+          {work.length === 0 ? (
+            <p>No work experience added.</p>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Organisation</th>
+                  <th>Job Title</th>
+                  <th>Date Started</th>
+                  <th>Date Ended</th>
+                </tr>
+              </thead>
+              <tbody>
+                {work.map((w) => (
+                  <tr key={w.id}>
+                    <td>{w.facility}</td>
+                    <td>{w.jobTitle}</td>
+                    <td>{formatDate(w.startDate)}</td>
+                    <td>{w.endDate ? formatDate(w.endDate) : "Present"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </section>
+      </div>
+    </>
   );
 }
