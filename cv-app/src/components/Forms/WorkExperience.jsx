@@ -51,7 +51,7 @@ export default function WorkExperience({ entries, onAdd, onRemove }) {
             value={draft.endDate} onChange={handleChange} />
         </div>
 
-        <button type="button" onClick={addEntry} disabled={!canAdd}>Add</button>
+        <button className="add" type="button" onClick={addEntry} disabled={!canAdd}>Add</button>
       </section>
 
       <ul className="entries">
