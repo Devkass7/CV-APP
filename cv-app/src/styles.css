@@ -56,7 +56,12 @@ form{
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     
+}
+
+.contact{
+    margin-top: 1.5rem;
 }
 
 .careerProfile{
@@ -158,4 +163,9 @@ tfoot th {
 tfoot td {
   font-weight: bold;
 }
+}
+
+
+@media screen and (min-width : 650px) {
+    
 }
