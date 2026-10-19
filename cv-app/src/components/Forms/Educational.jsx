@@ -56,10 +56,10 @@ export default function EducationalBackground({ entries, onAdd, onRemove }) {
           <li key={entry.id}>
             <span>
               {entry.school}
-              {entry.programme && `, ${entry.programme}`}
-              {entry.dateCompleted && ` (${formatDate(entry.dateCompleted)})`}
+              {entry.programme && `,   ${entry.programme}`}
+              {entry.dateCompleted && `  (${formatDate(entry.dateCompleted)})`}
             </span>
-            <button type="button" onClick={() => onRemove(entry.id)}>Remove</button>
+            <button className="remove" type="button" onClick={() => onRemove(entry.id)}>Remove</button>
           </li>
         ))}
       </ul>

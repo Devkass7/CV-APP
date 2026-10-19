@@ -165,6 +165,24 @@ tfoot td {
 }
 }
 
+.remove{
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: red;
+    background-color: #dde7dd;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    outline: none;
+    margin-left: 1rem;
+   
+
+
+    &:hover{
+        background-color: red;
+        color: white;
+    }
+}
 
 @media screen and (max-width : 750px) {
     .personal{

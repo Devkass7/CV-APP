@@ -59,10 +59,10 @@ export default function WorkExperience({ entries, onAdd, onRemove }) {
           <li key={entry.id}>
             <span>
               {entry.facility}
-              {entry.jobTitle && `, ${entry.jobTitle}`}
+              {entry.jobTitle && `,  ${entry.jobTitle}`}
               {entry.startDate && ` (${formatDate(entry.startDate)} – ${entry.endDate ? formatDate(entry.endDate) : "Present"})`}
             </span>
-            <button type="button" onClick={() => onRemove(entry.id)}>Remove</button>
+            <button className="remove" type="button" onClick={() => onRemove(entry.id)}>Remove</button>
           </li>
         ))}
       </ul>
