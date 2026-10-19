@@ -31,6 +31,7 @@ form{
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+
    
 
     input{
@@ -39,6 +40,8 @@ form{
         border-radius: 5px;
         width: fit-content;
         margin-left: 0.5em;   
+        display: block;
+       
         
         &:focus{
             border: 3px solid lime;
@@ -50,7 +53,10 @@ form{
 
 .names, .contact{
     display: flex;
-    gap:0.5rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .careerProfile{
@@ -65,16 +71,23 @@ form{
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
    
 }
 
 textarea{
 border-radius: 5px;
+min-width: 20rem;
+margin-top: 1rem;
+
 
     &:focus{
         border: 3px solid limegreen;
         outline: none;
+        
     }
+
+    
 }
 
 .work{
