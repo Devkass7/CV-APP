@@ -48,7 +48,7 @@ export default function EducationalBackground({ entries, onAdd, onRemove }) {
             value={draft.dateCompleted} onChange={handleChange} />
         </div>
 
-        <button type="button" onClick={addEntry} disabled={!canAdd}>Add</button>
+        <button className="add" type="button" onClick={addEntry} disabled={!canAdd}>Add</button>
       </div>
 
       <ul className="entries">
