@@ -184,6 +184,19 @@ tfoot td {
     }
 }
 
+.gen{
+    padding: 5px 15px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: orange;
+
+    &:hover{
+        color: #fff;
+        background-color: green;
+    }
+}
+
 @media screen and (max-width : 750px) {
     .personal{
         text-align: center;

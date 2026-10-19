@@ -53,7 +53,7 @@ export default function Forms() {
           onRemove={(id) => setWork((prev) => prev.filter((w) => w.id !== id))}
         />
 
-        <button type="submit">GENERATE CV</button>
+        <button className="gen" type="submit">GENERATE CV</button>
       </form>
     </>
   );
